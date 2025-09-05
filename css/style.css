@@ -9687,7 +9687,7 @@ textarea {
     height: 100vh;
     min-height: 600px; }
   .hero.page-inner, .hero.page-inner > .container > .row {
-    height: 70vh;
+    height: 40vh;
     min-height: 300px; }
   .hero > .container {
     position: relative;
