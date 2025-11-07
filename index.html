@@ -70,15 +70,54 @@
             background-color: #112947 !important;
         }
 
-        /* Vehicle cards - blue */
+        /* Vehicle cards - individual cards with gold border */
         .property-item,
         .card {
             background-color: #112947 !important;
+            border: 2px solid #f7c562 !important;
         }
 
-        /* Box features - blue */
+        .vehicle-item {
+            border: 2px solid #f7c562 !important;
+            background-color: #112947 !important;
+            overflow: hidden !important;
+            border-radius: 4px !important;
+            margin: 10px !important;
+            padding-right: 0 !important;
+        }
+
+        /* TinySlider generated items */
+        .property-slider .tns-item {
+            border: 2px solid #f7c562 !important;
+            padding-right: 0 !important;
+        }
+
+        /* Property content - blue background */
+        .property-content {
+            background-color: #112947 !important;
+        }
+
+        /* Ensure property slider doesn't override */
+        .property-slider {
+            background-color: transparent !important;
+        }
+
+        /* Box features - blue with gold border and same height */
+        .features-1 .row {
+            align-items: stretch !important;
+        }
+
+        .features-1 [class*="col-"] {
+            display: flex !important;
+        }
+
         .box-feature {
             background-color: #112947 !important;
+            border: 2px solid #f7c562 !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
         }
 
         /* Golden text color for all text */
@@ -88,6 +127,7 @@
         a,
         span,
         li,
+        address,
         .heading,
         .text-black-50 {
             color: #f7c562 !important;
