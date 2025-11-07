@@ -27,14 +27,14 @@
     </title>
 
     <style>
-        /* Custom colors for index.html */
-        /* Dark grey for navbar background - same as header */
+        /* Custom colors for index.html - ALL BLUE */
+        /* Blue for navbar background */
         .site-nav {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
         .site-nav .container {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
         /* Blue for menu-bg-wrap */
@@ -46,41 +46,54 @@
             background-color: #112947 !important;
         }
 
-        /* Dark grey for hero header instead of image - remove overlay effect */
+        /* Hero header with image - blue background */
         .hero .img.overlay {
-            background-image: none !important;
-            background-color: #6b675f !important;
-        }
-
-        .hero .img.overlay::before {
-            display: none !important;
+            background-image: url('images/hero_bg_house_cars.png') !important;
+            background-color: #112947 !important;
         }
 
         .hero {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
-        /* Same grey for entire page */
+        /* Blue for entire page */
         body {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
         .section {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
-        /* Footer same grey */
+        /* Footer blue */
         .site-footer {
-            background-color: #6b675f !important;
+            background-color: #112947 !important;
         }
 
-        /* Golden text color for hero header */
-        .hero h1,
-        .hero .heading {
+        /* Vehicle cards - blue */
+        .property-item,
+        .card {
+            background-color: #112947 !important;
+        }
+
+        /* Box features - blue */
+        .box-feature {
+            background-color: #112947 !important;
+        }
+
+        /* Golden text color for all text */
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p,
+        a,
+        span,
+        li,
+        .heading,
+        .text-black-50 {
             color: #f7c562 !important;
         }
 
-        /* Blue buttons with gold text */
+        /* Blue buttons with gold text and border */
         .btn,
         .btn-primary,
         .btn-outline-primary,
@@ -88,7 +101,7 @@
         button.btn {
             background-color: #112947 !important;
             color: #f7c562 !important;
-            border-color: #112947 !important;
+            border: 2px solid #f7c562 !important;
         }
 
         .btn:hover,
@@ -96,7 +109,22 @@
         .btn-outline-primary:hover {
             background-color: #1a3a5e !important;
             color: #f7c562 !important;
-            border-color: #1a3a5e !important;
+            border: 2px solid #f7c562 !important;
+        }
+
+        /* Carousel navigation controls - Forrige/Næste */
+        .controls .prev,
+        .controls .next {
+            background-color: #112947 !important;
+            color: #f7c562 !important;
+            border: 2px solid #f7c562 !important;
+        }
+
+        .controls .prev:hover,
+        .controls .next:hover {
+            background-color: #1a3a5e !important;
+            color: #f7c562 !important;
+            border: 2px solid #f7c562 !important;
         }
     </style>
 </head>
