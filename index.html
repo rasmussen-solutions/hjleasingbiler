@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="author" content="Rasmussen Solutions ApS"/>
-    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="shortcut icon" href="images/fav.png"/>
 
     <meta name="description" content="HJLeasingBiler - Danmarks førende leasingselskab for luksusbiler i Nordjylland. Privatleasing, flex leasing og split leasing af premium biler som Porsche, Audi, Mercedes og Land Rover."/>
     <meta name="keywords" content="bil leasing, privatleasing, flex leasing, luksusbiler, Porsche leasing, Audi leasing, Mercedes leasing, Land Rover leasing, nordjylland, hobro"/>
@@ -195,21 +195,32 @@
             margin-left: auto !important;
         }
 
-        /* Gold dots for vehicle carousel */
-        .tns-nav button {
-            background-color: #f7c562 !important;
+        /* Gold dots for vehicle carousel indicators */
+        .tns-nav {
+            text-align: center !important;
+            margin-top: 20px !important;
         }
 
-        .tns-nav button::before {
+        .tns-nav button {
             background-color: #f7c562 !important;
+            border: none !important;
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 50% !important;
+            margin: 0 5px !important;
+            padding: 0 !important;
+            opacity: 0.5 !important;
+            font-size: 0 !important;
+            line-height: 0 !important;
+        }
+
+        .tns-nav button::before,
+        .tns-nav button::after {
+            display: none !important;
         }
 
         .tns-nav button.tns-nav-active {
-            background-color: #f7c562 !important;
-        }
-
-        .tns-nav button.tns-nav-active::before {
-            background-color: #f7c562 !important;
+            opacity: 1 !important;
         }
     </style>
 </head>
