@@ -1,0 +1,194 @@
+/* Custom HJLeasingBiler Theme - Blue & Gold */
+
+/* Blue for navbar background */
+.site-nav {
+    background-color: #112947 !important;
+}
+
+.site-nav .container {
+    background-color: #112947 !important;
+}
+
+.site-nav .menu-bg-wrap {
+    background-color: #112947 !important;
+}
+
+.site-navigation {
+    background-color: #112947 !important;
+}
+
+/* Hero header - blue background */
+.hero .img.overlay {
+    background-color: #112947 !important;
+}
+
+.hero {
+    background-color: #112947 !important;
+}
+
+/* Blue for entire page */
+body {
+    background-color: #112947 !important;
+}
+
+.section {
+    background-color: #112947 !important;
+}
+
+/* Footer blue with gold border top */
+.site-footer {
+    background-color: #112947 !important;
+    border-top: 2px solid #f7c562 !important;
+}
+
+/* Vehicle cards - individual cards with gold border */
+.property-item,
+.card {
+    background-color: #112947 !important;
+    border: 2px solid #f7c562 !important;
+}
+
+.vehicle-item {
+    border: 2px solid #f7c562 !important;
+    background-color: #112947 !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+    margin: 10px !important;
+    padding-right: 0 !important;
+}
+
+/* TinySlider generated items */
+.property-slider .tns-item {
+    border: 2px solid #f7c562 !important;
+    padding-right: 0 !important;
+}
+
+/* Property content - blue background */
+.property-content {
+    background-color: #112947 !important;
+}
+
+/* Ensure property slider doesn't override */
+.property-slider {
+    background-color: transparent !important;
+}
+
+/* Box features - blue with gold border and same height */
+.features-1 .row {
+    align-items: stretch !important;
+}
+
+.features-1 [class*="col-"] {
+    display: flex !important;
+}
+
+.box-feature {
+    background-color: #112947 !important;
+    border: 2px solid #f7c562 !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+/* Gold circles with white icons */
+.wrap-icon {
+    background-color: #f7c562 !important;
+}
+
+.wrap-icon span {
+    color: #ffffff !important;
+}
+
+.wrap-icon span::before {
+    color: #ffffff !important;
+}
+
+/* Golden text color for all text */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+a,
+span,
+li,
+address,
+.heading,
+.text-black-50 {
+    color: #f7c562 !important;
+}
+
+/* Blue buttons with gold text and border */
+.btn,
+.btn-primary,
+.btn-outline-primary,
+a.btn,
+button.btn {
+    background-color: #112947 !important;
+    color: #f7c562 !important;
+    border: 2px solid #f7c562 !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-outline-primary:hover {
+    background-color: #1a3a5e !important;
+    color: #f7c562 !important;
+    border: 2px solid #f7c562 !important;
+}
+
+/* Carousel navigation controls - Forrige/Næste */
+.controls .prev,
+.controls .next {
+    background-color: #112947 !important;
+    color: #f7c562 !important;
+    border: 2px solid #f7c562 !important;
+}
+
+.controls .prev:hover,
+.controls .next:hover {
+    background-color: #1a3a5e !important;
+    color: #f7c562 !important;
+    border: 2px solid #f7c562 !important;
+}
+
+/* Center navigation items vertically with logo */
+.site-navigation {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.site-menu {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    margin-left: auto !important;
+}
+
+/* Gold dots for vehicle carousel indicators */
+.tns-nav {
+    text-align: center !important;
+    margin-top: 20px !important;
+}
+
+.tns-nav button {
+    background-color: #f7c562 !important;
+    border: none !important;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    margin: 0 5px !important;
+    padding: 0 !important;
+    opacity: 0.5 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+.tns-nav button::before,
+.tns-nav button::after {
+    display: none !important;
+}
+
+.tns-nav button.tns-nav-active {
+    opacity: 1 !important;
+}
