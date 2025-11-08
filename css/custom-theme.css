@@ -113,8 +113,29 @@ span,
 li,
 address,
 .heading,
-.text-black-50 {
+.text-black-50,
+.text-primary,
+.text-dark {
     color: #f7c562 !important;
+}
+
+/* FAQ questions in italic */
+h4.text-dark {
+    font-style: italic !important;
+}
+
+/* Alert info box - gold background with white text */
+.alert-info {
+    background-color: #f7c562 !important;
+    color: #ffffff !important;
+    border-color: #f7c562 !important;
+}
+
+.alert-info .alert-heading,
+.alert-info h5,
+.alert-info p,
+.alert-info strong {
+    color: #ffffff !important;
 }
 
 /* Blue buttons with gold text and border */
@@ -163,6 +184,48 @@ button.btn {
     align-items: center !important;
     margin: 0 !important;
     margin-left: auto !important;
+}
+
+/* Dropdown menu styling - blue background with gold text */
+.site-nav .site-navigation .site-menu .has-children .dropdown {
+    background-color: #112947 !important;
+    border: 2px solid #f7c562 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown > li {
+    background-color: #112947 !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown > li > a {
+    color: #f7c562 !important;
+    background-color: #112947 !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
+    background-color: #1a3a5e !important;
+    color: #f7c562 !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown a {
+    color: #f7c562 !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown .active a {
+    color: #f7c562 !important;
+}
+
+/* Mobile menu styling */
+.site-mobile-menu {
+    background-color: #112947 !important;
+}
+
+.site-mobile-menu a {
+    color: #f7c562 !important;
+}
+
+.site-mobile-menu .site-mobile-menu-body {
+    background-color: #112947 !important;
 }
 
 /* Gold dots for vehicle carousel indicators */

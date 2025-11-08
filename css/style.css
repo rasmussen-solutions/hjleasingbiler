@@ -9266,7 +9266,8 @@ textarea.form-control-lg {
         padding: 20px 0;
         margin-top: 20px;
         margin-left: 0px;
-        background: #fff;
+        background: #112947;
+        border: 2px solid #f7c562;
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
         transition: 0.2s 0s; }
@@ -9295,9 +9296,9 @@ textarea.form-control-lg {
           -webkit-transition: 0s all;
           -o-transition: 0s all;
           transition: 0s all;
-          color: #000; }
+          color: #f7c562; }
         .site-nav .site-navigation .site-menu .has-children .dropdown .active a {
-          color: #013220a !important; }
+          color: #f7c562 !important; }
         .site-nav .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
           padding: 0;
