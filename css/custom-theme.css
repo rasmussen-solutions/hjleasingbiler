@@ -133,12 +133,34 @@ h4.text-dark {
 
 .site-nav .site-navigation .site-menu .has-children .dropdown > li {
     background: transparent !important;
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown > li::before,
+.site-nav .site-navigation .site-menu .has-children .dropdown > li::after {
+    display: none !important;
 }
 
 .site-nav .site-navigation .site-menu .has-children .dropdown > li > a {
     color: var(--text-primary) !important;
     background: transparent !important;
     padding: 0.75rem 1.5rem !important;
+    display: block !important;
+    border: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    box-shadow: none !important;
+}
+
+.site-nav .site-navigation .site-menu .has-children .dropdown > li > a::before,
+.site-nav .site-navigation .site-menu .has-children .dropdown > li > a::after {
+    display: none !important;
 }
 
 .site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
@@ -150,7 +172,8 @@ h4.text-dark {
     color: var(--text-primary) !important;
 }
 
-.site-nav .site-navigation .site-menu .has-children .dropdown .active a {
+/* Only active submenu items get gold text color */
+.site-nav .site-navigation .site-menu .has-children .dropdown > li.active > a {
     color: var(--accent-gold) !important;
 }
 
