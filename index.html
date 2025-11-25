@@ -99,10 +99,16 @@
         }
 
         .site-menu {
-            display: flex !important;
             align-items: center !important;
             margin: 0 !important;
             margin-left: auto !important;
+        }
+
+        /* Show desktop menu on large screens */
+        @media (min-width: 992px) {
+            .site-menu {
+                display: flex !important;
+            }
         }
 
         .site-menu a {
@@ -181,6 +187,40 @@
         /* Only active submenu items get gold text color */
         .site-nav .site-navigation .site-menu .has-children .dropdown > li.active > a {
             color: var(--accent-gold) !important;
+        }
+
+        /* Mobile Menu Styling */
+        .site-mobile-menu {
+            background: rgba(10, 14, 39, 0.98) !important;
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+        }
+
+        .site-mobile-menu a {
+            color: var(--text-primary) !important;
+            padding: 1rem 1.5rem !important;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .site-mobile-menu a:hover {
+            background: rgba(212, 175, 55, 0.1) !important;
+            color: var(--accent-gold) !important;
+        }
+
+        .site-mobile-menu .site-mobile-menu-body {
+            background: transparent !important;
+        }
+
+        /* Burger Menu Icon - Gold Color */
+        .burger {
+            color: var(--accent-gold) !important;
+            display: none; /* Hidden by default on desktop */
+        }
+
+        .burger span,
+        .burger span::before,
+        .burger span::after {
+            background: var(--accent-gold) !important;
         }
 
         /* Hero Section - Modern & Dramatic */
@@ -529,6 +569,84 @@
 
             .box-feature {
                 padding: 2rem 1.5rem !important;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Mobile: Show burger menu, hide desktop menu */
+            .site-menu {
+                display: none !important;
+            }
+
+            .burger {
+                display: block !important;
+            }
+
+            /* Make leasing type cards full width on mobile */
+            .features-1 .col-6,
+            .features-1 .col-lg-3 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* Hero section adjustments for mobile */
+            .hero {
+                min-height: 50vh !important;
+                padding: 2rem 0;
+            }
+
+            .hero.page-inner {
+                min-height: 30vh !important;
+            }
+
+            /* Navbar adjustments */
+            .site-nav {
+                padding: 0.5rem 0;
+            }
+
+            .site-nav .logo img {
+                height: 60px !important;
+            }
+
+            /* Vehicle cards on mobile */
+            .vehicle-item,
+            .property-item {
+                margin: 10px 0 !important;
+            }
+
+            /* Card adjustments for mobile */
+            .card {
+                margin-bottom: 1rem;
+            }
+
+            /* Two-column layouts on mobile */
+            .row .col-md-6 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 1rem;
+            }
+
+            /* Footer columns stack on mobile */
+            .site-footer .col-lg-4 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 2rem;
+                text-align: center !important;
+            }
+
+            /* Breadcrumb text size */
+            .breadcrumb {
+                font-size: 0.875rem;
+            }
+
+            /* Sections padding on mobile */
+            .section {
+                padding: 3rem 0 !important;
+            }
+
+            /* Container padding on mobile */
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
             }
         }
 

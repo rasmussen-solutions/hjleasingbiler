@@ -93,10 +93,16 @@ h4.text-dark {
 }
 
 .site-menu {
-    display: flex !important;
     align-items: center !important;
     margin: 0 !important;
     margin-left: auto !important;
+}
+
+/* Show desktop menu on large screens */
+@media (min-width: 992px) {
+    .site-menu {
+        display: flex !important;
+    }
 }
 
 .site-menu a {
@@ -181,14 +187,39 @@ h4.text-dark {
 .site-mobile-menu {
     background: rgba(10, 14, 39, 0.98) !important;
     backdrop-filter: blur(10px);
+    z-index: 9999;
 }
 
 .site-mobile-menu a {
     color: var(--text-primary) !important;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.site-mobile-menu a:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+    color: var(--accent-gold) !important;
 }
 
 .site-mobile-menu .site-mobile-menu-body {
     background: transparent !important;
+}
+
+.site-mobile-menu .site-mobile-menu-header {
+    background: rgba(10, 14, 39, 0.98) !important;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Burger menu icon */
+.burger {
+    color: var(--accent-gold) !important;
+    display: none; /* Hidden by default on desktop */
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+    background: var(--accent-gold) !important;
 }
 
 /* Hero Section - Modern & Dramatic */
@@ -640,6 +671,98 @@ button.btn {
     .vehicle-item,
     .property-item {
         margin: 10px 0 !important;
+    }
+
+    /* Mobile: Show burger menu, hide desktop menu */
+    .site-menu {
+        display: none !important;
+    }
+
+    .burger {
+        display: block !important;
+    }
+
+    /* Make cards full width on mobile */
+    .features-1 [class*="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Ensure proper spacing for mobile cards */
+    .box-feature {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Hero section adjustments for mobile */
+    .hero {
+        min-height: 50vh !important;
+        padding: 2rem 0;
+    }
+
+    .hero.page-inner {
+        min-height: 30vh !important;
+    }
+
+    /* Navbar adjustments */
+    .site-nav {
+        padding: 0.5rem 0;
+    }
+
+    .site-nav .logo img {
+        height: 60px !important;
+    }
+
+    /* Table responsiveness */
+    .table {
+        font-size: 0.875rem;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 0.5rem !important;
+    }
+
+    /* Card adjustments for mobile */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    /* Step boxes on leasing pages */
+    .row .col-md-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Two-column layouts on mobile */
+    .row .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer columns stack on mobile */
+    .site-footer .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 2rem;
+        text-align: center !important;
+    }
+
+    /* Breadcrumb text size */
+    .breadcrumb {
+        font-size: 0.875rem;
+    }
+
+    /* Sections padding on mobile */
+    .section {
+        padding: 3rem 0 !important;
+    }
+
+    /* Container padding on mobile */
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 }
 
