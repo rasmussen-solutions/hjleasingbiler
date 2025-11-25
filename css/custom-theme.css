@@ -327,9 +327,13 @@ h4.text-dark {
     border-radius: 16px !important;
     overflow: hidden !important;
     margin: 15px !important;
-    padding-right: 0 !important;
     box-shadow: var(--shadow-md);
     transform: translateY(0);
+}
+
+/* Padding for vehicle cards on list pages (not in slider) */
+.section > .container .vehicle-item:not(.property-slider .vehicle-item) {
+    padding: 15px !important;
 }
 
 .vehicle-item:hover,
@@ -337,6 +341,17 @@ h4.text-dark {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: var(--accent-gold);
+}
+
+/* Rounded image corners for cards with padding */
+.section > .container .vehicle-item:not(.property-slider .vehicle-item) .img {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section > .container .vehicle-item:not(.property-slider .vehicle-item) img {
+    border-radius: 12px;
 }
 
 .vehicle-item img,
@@ -351,12 +366,12 @@ h4.text-dark {
 
 .property-slider .tns-item {
     border: none !important;
-    padding-right: 0 !important;
 }
 
 .property-content {
     background: transparent !important;
     padding: 1.5rem;
+    padding-top: 1rem;
 }
 
 .property-slider {
