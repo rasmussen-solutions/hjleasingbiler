@@ -689,3 +689,44 @@ ul li {
 strong {
     color: var(--accent-gold) !important;
 }
+
+/* Table styling */
+.table {
+    color: var(--text-secondary) !important;
+    border-color: var(--border-subtle) !important;
+}
+
+.table thead {
+    background: rgba(21, 27, 61, 0.6) !important;
+    border-color: var(--border-subtle) !important;
+}
+
+.table thead th {
+    color: var(--accent-light) !important;
+    font-weight: 600;
+    border-color: var(--border-subtle) !important;
+    padding: 1rem;
+}
+
+.table tbody tr {
+    border-color: var(--border-subtle) !important;
+}
+
+.table tbody td {
+    color: var(--text-secondary) !important;
+    border-color: var(--border-subtle) !important;
+    padding: 0.75rem 1rem;
+}
+
+.table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.1) !important;
+}
+
+.table-bordered {
+    border: 1px solid var(--border-subtle) !important;
+}
+
+.table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+}
