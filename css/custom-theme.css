@@ -403,7 +403,8 @@ h4.text-dark {
 .box-feature span.flaticon-house,
 .box-feature span.flaticon-house-1,
 .box-feature span.flaticon-house-2,
-.box-feature span.flaticon-house-3 {
+.box-feature span.flaticon-house-3,
+.box-feature span[class*="flaticon-"] {
     font-size: 3.5rem;
     color: var(--accent-gold) !important;
     margin-bottom: 1.5rem;
