@@ -129,6 +129,60 @@
             width: 80%;
         }
 
+        /* Dropdown menu styling */
+        .site-nav .site-navigation .site-menu .has-children .dropdown {
+            background: rgba(10, 14, 39, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle) !important;
+            box-shadow: var(--shadow-md) !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li {
+            background: transparent !important;
+            border: 0 !important;
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            border-left: 0 !important;
+            border-right: 0 !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li::before,
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li::after {
+            display: none !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li > a {
+            color: var(--text-primary) !important;
+            background: transparent !important;
+            padding: 0.75rem 1.5rem !important;
+            display: block !important;
+            border: 0 !important;
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            border-left: 0 !important;
+            border-right: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li > a::before,
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li > a::after {
+            display: none !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li > a:hover {
+            background: rgba(212, 175, 55, 0.1) !important;
+            color: var(--accent-gold) !important;
+        }
+
+        .site-nav .site-navigation .site-menu .has-children .dropdown a {
+            color: var(--text-primary) !important;
+        }
+
+        /* Only active submenu items get gold text color */
+        .site-nav .site-navigation .site-menu .has-children .dropdown > li.active > a {
+            color: var(--accent-gold) !important;
+        }
+
         /* Hero Section - Modern & Dramatic */
         .hero {
             background: var(--primary-dark) !important;
