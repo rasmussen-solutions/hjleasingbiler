@@ -334,6 +334,9 @@ h4.text-dark {
     border: 1px solid var(--border-subtle) !important;
     border-radius: 16px !important;
     box-shadow: var(--shadow-md);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -344,6 +347,15 @@ h4.text-dark {
 
 .card-body {
     color: var(--text-secondary) !important;
+}
+
+/* Equal height for step boxes in leasing pages */
+.row .col-md-4 {
+    display: flex;
+}
+
+.row .col-md-4 .card {
+    width: 100%;
 }
 
 .bg-primary {
