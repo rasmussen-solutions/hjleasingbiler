@@ -194,6 +194,9 @@ h4.text-dark {
     color: var(--text-primary) !important;
     padding: 1rem 1.5rem !important;
     border-bottom: 1px solid var(--border-subtle);
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
 .site-mobile-menu a:hover {
@@ -203,6 +206,23 @@ h4.text-dark {
 
 .site-mobile-menu .site-mobile-menu-body {
     background: transparent !important;
+}
+
+/* Mobile menu list items */
+.site-mobile-menu li {
+    display: block !important;
+}
+
+/* Mobile menu dropdown arrow alignment */
+.site-mobile-menu .has-children .arrow-collapse {
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+}
+
+/* Fix vertical alignment of arrow-collapse with text in mobile menu */
+.site-mobile-menu .site-nav-wrap .arrow-collapse {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 }
 
 .site-mobile-menu .site-mobile-menu-header {
