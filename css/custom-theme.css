@@ -214,6 +214,8 @@ h4.text-dark {
 .burger {
     color: var(--accent-gold) !important;
     display: none; /* Hidden by default on desktop */
+    margin-left: auto !important; /* Push to right side */
+    margin-right: 0 !important;
 }
 
 .burger span,
