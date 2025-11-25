@@ -763,12 +763,36 @@ button.btn {
         margin-bottom: 1rem;
     }
 
-    /* Footer columns stack on mobile */
-    .site-footer .col-lg-4 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        margin-bottom: 2rem;
-        text-align: center !important;
+    /* Footer columns on mobile - two columns side by side */
+    .site-footer .row > .col-lg-4 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Kontakt column - align left */
+    .site-footer .row > .col-lg-4:first-child {
+        text-align: left !important;
+    }
+
+    /* Services column - align right */
+    .site-footer .row > .col-lg-4:nth-child(2) {
+        text-align: right !important;
+    }
+
+    .site-footer .row > .col-lg-4:nth-child(2) .list-unstyled {
+        float: none !important;
+        text-align: right !important;
+    }
+
+    .site-footer h3 {
+        font-size: 1rem;
+    }
+
+    .site-footer address,
+    .site-footer p,
+    .site-footer .widget {
+        font-size: 0.85rem;
     }
 
     /* Breadcrumb text size */
