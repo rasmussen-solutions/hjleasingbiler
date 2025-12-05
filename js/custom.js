@@ -77,6 +77,7 @@
 				gutter: 30,
 				items: 3,
 				autoplay: true,
+				autoplayHoverPause: true,
 				autoplayButtonOutput: false,
 				controlsContainer: '#property-nav',
 				responsive: {

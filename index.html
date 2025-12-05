@@ -667,6 +667,89 @@
             }
         }
 
+        /* Internal Vehicle Image Slider */
+        .vehicle-image-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+            height: 220px;
+        }
+
+        .vehicle-image-slider .slides {
+            display: flex;
+            transition: transform 0.4s ease;
+            height: 100%;
+        }
+
+        .vehicle-image-slider .slide {
+            min-width: 100%;
+            flex-shrink: 0;
+            height: 100%;
+        }
+
+        .vehicle-image-slider .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .vehicle-image-slider .slider-nav {
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+            width: 36px;
+            height: 36px;
+            background: rgba(10, 14, 39, 0.7);
+            border: 1px solid var(--border-subtle);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            backdrop-filter: blur(4px);
+        }
+
+        .vehicle-image-slider .slider-nav:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        .vehicle-image-slider .slider-prev {
+            left: 10px;
+        }
+
+        .vehicle-image-slider .slider-next {
+            right: 10px;
+        }
+
+        .vehicle-image-slider .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .vehicle-image-slider .slider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            border: none;
+            padding: 0;
+        }
+
+        .vehicle-image-slider .slider-dot.active {
+            background: var(--accent-gold);
+        }
+
         /* Link Hover Effects */
         a {
             color: var(--accent-gold) !important;
@@ -775,8 +858,19 @@
                 <div class="property-slider-wrap">
                     <div class="property-slider">
                         <div class="vehicle-item">
-                            <div class="img">
-                                <img src="images/leasing/porsche/panamera-gts/front.jpeg" alt="Porsche Panamera GTS leasing" class="img-fluid"/>
+                            <div class="vehicle-image-slider">
+                                <div class="slides">
+                                    <div class="slide"><img src="images/leasing/porsche/panamera-gts/front.jpeg" alt="Porsche Panamera GTS front"/></div>
+                                    <div class="slide"><img src="images/leasing/porsche/panamera-gts/rear.jpeg" alt="Porsche Panamera GTS rear"/></div>
+                                    <div class="slide"><img src="images/leasing/porsche/panamera-gts/interior.jpeg" alt="Porsche Panamera GTS interior"/></div>
+                                </div>
+                                <button class="slider-nav slider-prev">&#10094;</button>
+                                <button class="slider-nav slider-next">&#10095;</button>
+                                <div class="slider-dots">
+                                    <button class="slider-dot active"></button>
+                                    <button class="slider-dot"></button>
+                                    <button class="slider-dot"></button>
+                                </div>
                             </div>
                             <div class="property-content">
                                 <span class="city d-block mb-2">Porsche Panamera GTS</span>
@@ -786,8 +880,19 @@
                             </div>
                         </div>
                         <div class="vehicle-item">
-                            <div class="img">
-                                <img src="images/leasing/porsche/gt3/front_side.jpeg" alt="Porsche 911 GT3 leasing" class="img-fluid"/>
+                            <div class="vehicle-image-slider">
+                                <div class="slides">
+                                    <div class="slide"><img src="images/leasing/porsche/gt3/front_side.jpeg" alt="Porsche 911 GT3 side"/></div>
+                                    <div class="slide"><img src="images/leasing/porsche/gt3/front.jpeg" alt="Porsche 911 GT3 front"/></div>
+                                    <div class="slide"><img src="images/leasing/porsche/gt3/rear.jpeg" alt="Porsche 911 GT3 rear"/></div>
+                                </div>
+                                <button class="slider-nav slider-prev">&#10094;</button>
+                                <button class="slider-nav slider-next">&#10095;</button>
+                                <div class="slider-dots">
+                                    <button class="slider-dot active"></button>
+                                    <button class="slider-dot"></button>
+                                    <button class="slider-dot"></button>
+                                </div>
                             </div>
                             <div class="property-content">
                                 <span class="city d-block mb-2">Porsche 911 GT3</span>
@@ -797,8 +902,19 @@
                             </div>
                         </div>
                         <div class="vehicle-item">
-                            <div class="img">
-                                <img src="images/leasing/dodge/ram/front_side.jpeg" alt="Dodge Ram 1500 leasing" class="img-fluid"/>
+                            <div class="vehicle-image-slider">
+                                <div class="slides">
+                                    <div class="slide"><img src="images/leasing/dodge/ram/front.jpeg" alt="Dodge Ram 1500 front"/></div>
+                                    <div class="slide"><img src="images/leasing/dodge/ram/front_side.jpeg" alt="Dodge Ram 1500 side"/></div>
+                                    <div class="slide"><img src="images/leasing/dodge/ram/interior.jpeg" alt="Dodge Ram 1500 interior"/></div>
+                                </div>
+                                <button class="slider-nav slider-prev">&#10094;</button>
+                                <button class="slider-nav slider-next">&#10095;</button>
+                                <div class="slider-dots">
+                                    <button class="slider-dot active"></button>
+                                    <button class="slider-dot"></button>
+                                    <button class="slider-dot"></button>
+                                </div>
                             </div>
                             <div class="property-content">
                                 <span class="city d-block mb-2">Dodge Ram 1500</span>
@@ -808,8 +924,19 @@
                             </div>
                         </div>
                         <div class="vehicle-item">
-                            <div class="img">
-                                <img src="images/leasing/audi/sq7/front.jpeg" alt="Audi SQ7 leasing" class="img-fluid"/>
+                            <div class="vehicle-image-slider">
+                                <div class="slides">
+                                    <div class="slide"><img src="images/leasing/audi/sq7/front.jpeg" alt="Audi SQ7 front"/></div>
+                                    <div class="slide"><img src="images/leasing/audi/sq7/rear.jpeg" alt="Audi SQ7 rear"/></div>
+                                    <div class="slide"><img src="images/leasing/audi/sq7/interior.jpeg" alt="Audi SQ7 interior"/></div>
+                                </div>
+                                <button class="slider-nav slider-prev">&#10094;</button>
+                                <button class="slider-nav slider-next">&#10095;</button>
+                                <div class="slider-dots">
+                                    <button class="slider-dot active"></button>
+                                    <button class="slider-dot"></button>
+                                    <button class="slider-dot"></button>
+                                </div>
                             </div>
                             <div class="property-content">
                                 <span class="city d-block mb-2">Audi SQ7</span>
@@ -1002,5 +1129,52 @@
 <script src="js/navbar.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/custom.js"></script>
+<script>
+    // Internal vehicle image sliders
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageSliders = document.querySelectorAll('.vehicle-image-slider');
+
+        imageSliders.forEach(function(slider) {
+            const slides = slider.querySelector('.slides');
+            const slideElements = slider.querySelectorAll('.slide');
+            const dots = slider.querySelectorAll('.slider-dot');
+            const prevBtn = slider.querySelector('.slider-prev');
+            const nextBtn = slider.querySelector('.slider-next');
+            let currentIndex = 0;
+            const totalSlides = slideElements.length;
+
+            function goToSlide(index) {
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                currentIndex = index;
+                slides.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+
+                dots.forEach(function(dot, i) {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            prevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                goToSlide(currentIndex - 1);
+            });
+
+            nextBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                goToSlide(currentIndex + 1);
+            });
+
+            dots.forEach(function(dot, index) {
+                dot.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    goToSlide(index);
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>
