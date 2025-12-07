@@ -572,6 +572,10 @@ button.btn {
 }
 
 /* Carousel Controls */
+.controls {
+    margin-top: 10px !important;
+}
+
 .controls .prev,
 .controls .next {
     background: rgba(21, 27, 61, 0.8) !important;
@@ -592,6 +596,20 @@ button.btn {
 }
 
 /* Carousel Indicators - Tiny Slider Navigation */
+.property-slider-wrap .tns-nav {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    text-align: center !important;
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
 .tns-nav {
     text-align: center !important;
     margin-top: 30px !important;
@@ -867,20 +885,10 @@ button.btn {
         -webkit-tap-highlight-color: transparent;
     }
 
-    /* Carousel dots - larger touch targets on mobile */
+    /* Carousel dots on mobile - compact and properly spaced */
     .tns-nav {
-        margin-top: 20px !important;
-    }
-
-    .tns-nav button {
-        width: 14px !important;
-        height: 14px !important;
-        margin: 0 8px !important;
-        min-width: 44px !important;
-        min-height: 44px !important;
-        background-clip: content-box !important;
-        padding: 15px !important;
-        box-sizing: content-box !important;
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
     }
 
     /* Feature section text on mobile */
@@ -1379,6 +1387,20 @@ strong {
     }
 
     /* Tiny slider navigation on mobile */
+    .tns-nav {
+        gap: 6px !important;
+        margin-top: 20px !important;
+    }
+
+    .tns-nav button {
+        width: 8px !important;
+        height: 8px !important;
+        min-width: 8px !important;
+        max-width: 8px !important;
+        min-height: 8px !important;
+        max-height: 8px !important;
+    }
+
     .controls {
         display: flex !important;
         justify-content: center !important;
@@ -1471,6 +1493,21 @@ strong {
         height: 50px;
     }
 
+    /* Tiny slider navigation - extra small */
+    .tns-nav {
+        gap: 5px !important;
+        margin-top: 15px !important;
+    }
+
+    .tns-nav button {
+        width: 6px !important;
+        height: 6px !important;
+        min-width: 6px !important;
+        max-width: 6px !important;
+        min-height: 6px !important;
+        max-height: 6px !important;
+    }
+
     /* Even smaller slider on very small screens */
     .vehicle-image-slider {
         height: 160px;
@@ -1488,20 +1525,6 @@ strong {
 
     .vehicle-image-slider .slider-next {
         right: 4px;
-    }
-
-    .vehicle-image-slider .slider-dots {
-        bottom: 6px !important;
-        gap: 5px !important;
-    }
-
-    .vehicle-image-slider .slider-dots .slider-dot {
-        width: 6px !important;
-        height: 6px !important;
-        min-width: 6px !important;
-        min-height: 6px !important;
-        max-width: 6px !important;
-        max-height: 6px !important;
     }
 
     /* Hero adjustments */
