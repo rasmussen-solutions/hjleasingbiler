@@ -673,12 +673,14 @@
             overflow: hidden;
             border-radius: 12px 12px 0 0;
             height: 220px;
+            touch-action: pan-y pinch-zoom;
         }
 
         .vehicle-image-slider .slides {
             display: flex;
             transition: transform 0.4s ease;
             height: 100%;
+            will-change: transform;
         }
 
         .vehicle-image-slider .slide {
@@ -692,62 +694,97 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            pointer-events: none;
         }
 
         .vehicle-image-slider .slider-nav {
             position: absolute;
             top: 50%;
-            margin-top: -18px;
-            width: 36px;
-            height: 36px;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
             background: rgba(10, 14, 39, 0.7);
             border: 1px solid var(--border-subtle);
             border-radius: 50%;
             color: var(--accent-gold);
-            font-size: 1rem;
+            font-size: 1.25rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
             backdrop-filter: blur(4px);
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .vehicle-image-slider .slider-nav:hover {
+        .vehicle-image-slider .slider-nav:hover,
+        .vehicle-image-slider .slider-nav:active {
             background: var(--accent-gold);
             color: var(--primary-dark);
         }
 
         .vehicle-image-slider .slider-prev {
-            left: 10px;
+            left: 8px;
         }
 
         .vehicle-image-slider .slider-next {
-            right: 10px;
+            right: 8px;
         }
 
         .vehicle-image-slider .slider-dots {
             position: absolute;
-            bottom: 10px;
+            bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 6px;
+            gap: 8px;
             z-index: 10;
         }
 
         .vehicle-image-slider .slider-dot {
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.4);
             cursor: pointer;
             border: none;
             padding: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .vehicle-image-slider .slider-dot.active {
             background: var(--accent-gold);
+        }
+
+        /* Mobile slider optimizations */
+        @media (max-width: 768px) {
+            .vehicle-image-slider {
+                height: 200px;
+            }
+
+            .vehicle-image-slider .slider-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .vehicle-image-slider .slider-prev {
+                left: 6px;
+            }
+
+            .vehicle-image-slider .slider-next {
+                right: 6px;
+            }
+
+            .vehicle-image-slider .slider-dots {
+                bottom: 10px;
+                gap: 10px;
+            }
+
+            .vehicle-image-slider .slider-dot {
+                width: 12px;
+                height: 12px;
+            }
         }
 
         /* Link Hover Effects */
@@ -1174,7 +1211,7 @@
 <script src="js/counter.js"></script>
 <script src="js/custom.js"></script>
 <script>
-    // Internal vehicle image sliders
+    // Internal vehicle image sliders with touch support
     document.addEventListener('DOMContentLoaded', function() {
         const imageSliders = document.querySelectorAll('.vehicle-image-slider');
 
@@ -1187,6 +1224,12 @@
             let currentIndex = 0;
             const totalSlides = slideElements.length;
 
+            // Touch handling variables
+            let touchStartX = 0;
+            let touchEndX = 0;
+            let isDragging = false;
+            const swipeThreshold = 50;
+
             function goToSlide(index) {
                 if (index < 0) index = totalSlides - 1;
                 if (index >= totalSlides) index = 0;
@@ -1196,6 +1239,35 @@
                 dots.forEach(function(dot, i) {
                     dot.classList.toggle('active', i === currentIndex);
                 });
+            }
+
+            // Touch event handlers
+            slider.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+                isDragging = true;
+            }, { passive: true });
+
+            slider.addEventListener('touchmove', function(e) {
+                if (!isDragging) return;
+                touchEndX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', function(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeDistance = touchEndX - touchStartX;
+                if (Math.abs(swipeDistance) > swipeThreshold) {
+                    if (swipeDistance > 0) {
+                        goToSlide(currentIndex - 1); // Swipe right = previous
+                    } else {
+                        goToSlide(currentIndex + 1); // Swipe left = next
+                    }
+                }
             }
 
             prevBtn.addEventListener('click', function(e) {

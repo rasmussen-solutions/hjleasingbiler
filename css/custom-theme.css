@@ -825,6 +825,170 @@ button.btn {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+
+    /* Property slider controls - mobile optimized */
+    .controls {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        margin-top: 20px !important;
+    }
+
+    .controls .prev,
+    .controls .next {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.9rem !important;
+        min-height: 44px !important;
+        min-width: 90px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Carousel dots - larger touch targets on mobile */
+    .tns-nav {
+        margin-top: 20px !important;
+    }
+
+    .tns-nav button {
+        width: 14px !important;
+        height: 14px !important;
+        margin: 0 8px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        background-clip: content-box !important;
+        padding: 15px !important;
+        box-sizing: content-box !important;
+    }
+
+    /* Feature section text on mobile */
+    .feature-h {
+        margin-bottom: 2rem;
+    }
+
+    .feature-h .wrap-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-h .wrap-icon span {
+        font-size: 1.5rem;
+    }
+
+    .feature-text h3 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Image about section on mobile */
+    .img-about {
+        margin-bottom: 2rem;
+    }
+
+    /* Button touch targets on mobile */
+    .btn,
+    .btn-primary,
+    a.btn {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        touch-action: manipulation;
+    }
+
+    /* Vehicle gallery on mobile */
+    .vehicle-gallery .row .col-3 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Improve text readability on mobile */
+    p, .text-black-50 {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Property card on mobile */
+    .property-content {
+        padding: 1rem !important;
+    }
+
+    .property-content .city {
+        font-size: 1.1rem;
+    }
+
+    .property-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Pagination on mobile */
+    .custom-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .custom-pagination a {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Alert boxes on mobile */
+    .alert {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Tables scroll horizontally on mobile */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* General mobile-friendly styles */
+@media (max-width: 576px) {
+    /* Extra small screens */
+    h1, .hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Footer stacks to single column on very small screens */
+    .site-footer .row > .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .site-footer .row > .col-lg-4:nth-child(2) .list-unstyled {
+        text-align: center !important;
+    }
+
+    /* Smaller logo on extra small screens */
+    .site-nav .logo img {
+        height: 50px !important;
+    }
+
+    /* Stack feature icons vertically on very small screens */
+    .feature-h {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-h .wrap-icon {
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
 }
 
 /* Link Hover Effects */
