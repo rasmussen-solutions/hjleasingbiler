@@ -1,5 +1,11 @@
 /* Modern Dark Theme - HJLeasingBiler */
 
+/* Global overflow fix for mobile */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 :root {
     --primary-dark: #0a0e27;
     --secondary-dark: #151b3d;
@@ -1128,6 +1134,7 @@ strong {
     border-radius: 12px 12px 0 0;
     height: 220px;
     touch-action: pan-y pinch-zoom;
+    background: var(--secondary-dark);
 }
 
 .vehicle-image-slider .slides {
@@ -1147,6 +1154,7 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     pointer-events: none;
 }
@@ -1157,11 +1165,12 @@ strong {
     transform: translateY(-50%);
     width: 44px;
     height: 44px;
-    background: rgba(10, 14, 39, 0.7);
+    background: rgba(10, 14, 39, 0.85);
     border: 1px solid var(--border-subtle);
     border-radius: 50%;
     color: var(--accent-gold);
     font-size: 1.25rem;
+    line-height: 1;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1169,6 +1178,9 @@ strong {
     z-index: 10;
     backdrop-filter: blur(4px);
     -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
 }
 
 .vehicle-image-slider .slider-nav:hover,
@@ -1203,11 +1215,37 @@ strong {
     cursor: pointer;
     border: none;
     padding: 0;
+    margin: 0;
     -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .vehicle-image-slider .slider-dot.active {
     background: var(--accent-gold);
+}
+
+/* ==========================================================================
+   Hide Decorative Dots on Mobile
+   ========================================================================== */
+
+.img-about.dots::after {
+    display: block;
+}
+
+/* ==========================================================================
+   Vehicle Item Cards
+   ========================================================================== */
+
+.vehicle-item {
+    background: var(--secondary-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+}
+
+.vehicle-item .property-content {
+    padding: 1.25rem;
 }
 
 /* ==========================================================================
@@ -1233,14 +1271,20 @@ strong {
    ========================================================================== */
 
 @media (max-width: 768px) {
+    /* Hide decorative dots on mobile - causes layout issues */
+    .img-about.dots::after {
+        display: none !important;
+    }
+
+    /* Vehicle image slider mobile */
     .vehicle-image-slider {
-        height: 200px;
+        height: 180px;
     }
 
     .vehicle-image-slider .slider-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 
     .vehicle-image-slider .slider-prev {
@@ -1252,28 +1296,167 @@ strong {
     }
 
     .vehicle-image-slider .slider-dots {
-        bottom: 10px;
-        gap: 10px;
+        bottom: 8px;
+        gap: 6px;
     }
 
     .vehicle-image-slider .slider-dot {
-        width: 12px;
-        height: 12px;
+        width: 8px;
+        height: 8px;
     }
 
+    /* Vehicle item cards on mobile */
+    .vehicle-item {
+        margin-bottom: 1rem;
+    }
+
+    .vehicle-item .property-content {
+        padding: 1rem;
+    }
+
+    .vehicle-item .property-content .city {
+        font-size: 1rem;
+    }
+
+    .vehicle-item .property-content p {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+
+    /* Property slider wrapper */
+    .property-slider-wrap {
+        overflow: hidden;
+    }
+
+    /* Tiny slider navigation on mobile */
+    .controls {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .controls .prev,
+    .controls .next {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Logo */
     .site-nav .logo img {
         height: 60px;
     }
 
+    /* Contact icons */
     .contact-icon {
         width: 60px;
         height: 60px;
         font-size: 2rem;
+    }
+
+    /* Hero section */
+    .hero {
+        min-height: 50vh !important;
+    }
+
+    .hero h1.heading {
+        font-size: 1.75rem !important;
+        padding: 0 1rem;
+    }
+
+    /* Feature boxes */
+    .box-feature {
+        padding: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+
+    .box-feature h3 {
+        font-size: 1.1rem;
+    }
+
+    .box-feature p {
+        font-size: 0.875rem;
+    }
+
+    /* Section spacing */
+    .section {
+        padding: 2.5rem 0 !important;
+    }
+
+    /* Feature icons section */
+    .feature-h {
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-h .wrap-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+
+    .feature-h .wrap-icon span {
+        font-size: 1.25rem;
+    }
+
+    .feature-text h3 {
+        font-size: 1rem !important;
+    }
+
+    .feature-text p {
+        font-size: 0.875rem;
+    }
+
+    /* Footer on mobile */
+    .site-footer {
+        padding: 2rem 0 !important;
     }
 }
 
 @media (max-width: 576px) {
     .site-nav .logo img {
         height: 50px;
+    }
+
+    /* Even smaller slider on very small screens */
+    .vehicle-image-slider {
+        height: 160px;
+    }
+
+    .vehicle-image-slider .slider-nav {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+
+    .vehicle-image-slider .slider-prev {
+        left: 4px;
+    }
+
+    .vehicle-image-slider .slider-next {
+        right: 4px;
+    }
+
+    /* Hero adjustments */
+    .hero h1.heading {
+        font-size: 1.5rem !important;
+    }
+
+    /* Stack feature boxes fully */
+    .features-1 .col-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Feature section image */
+    .img-about {
+        margin-bottom: 2rem;
+    }
+
+    .img-about img {
+        border-radius: 8px;
     }
 }
